@@ -63,6 +63,9 @@
         set expandtab
       '';
     })
+    htop
+    iotop-c
+    nethogs
     wget
     git
     xterm

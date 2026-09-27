@@ -16,6 +16,9 @@
 
   systemd.services."serial-getty@ttyS0" = {
     wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      Restart = "always";
+    };
     environment = {
       TERM = "xterm-256color";
     };

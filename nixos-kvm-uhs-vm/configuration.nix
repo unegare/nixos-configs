@@ -15,10 +15,11 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.systemd-boot.extraInstallCommands = ''
-    echo "console-mode max" >> /boot/loader/loader.conf
-    echo "serial ttyS0 115200" >> /boot/loader/loader.conf
-  '';
+#  boot.loader.systemd-boot.extraInstallCommands = ''
+#    echo "console-mode max" >> /boot/loader/loader.conf
+#    echo "serial ttyS0 115200" >> /boot/loader/loader.conf
+#  '';
+  boot.loader.systemd-boot.consoleMode = "max";
 
 #  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
